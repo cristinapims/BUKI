@@ -1,10 +1,15 @@
-export default function Home() {
+import './globals.css'
+import { ReactNode } from 'react'
+
+export const metadata = {
+  title: 'Buki',
+  description: 'Buki - App'
+}
+
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <main className="min-h-screen flex items-center justify-center p-8">
-      <div>
-        <h1 className="text-4xl font-bold">Bienvenido a Buki</h1>
-        <p className="mt-4 text-gray-600">Aplicación inicializada con Next.js, TypeScript y Tailwind.</p>
-      </div>
-    </main>
+    <html lang="en">
+      <body>{children}</body>
+    </html>
   )
 }
